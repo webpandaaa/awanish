@@ -26,21 +26,6 @@ app.post("/send-email", async (req, res) => {
       },
     });
 
-    // Send mail to admin 
-    // await transporter.sendMail({
-    //   from: process.env.SENDING_MAIL,
-    //   to: [process.env.GMAIL_USER,],
-    //   replyTo: user_email, // <- this is what you want
-    //   subject: "New Contact Form Submission From Your Portfolio Website",
-    //   html: `
-    //     <h3>New Message From <a href="https://awanishkumar.com" target="_blank">https://awanishkumar.com/</a> </h3>
-    //     <p><strong>Name:</strong> ${user_name}</p>
-    //     <p><strong>Email:</strong> ${user_email}</p>
-    //     <p><strong>Subject:</strong> ${subject}</p>
-    //     <p><strong>Message:</strong> ${message}</p>
-    //     <p><strong>Phone:</strong> ${phone}</p>
-    //   `,
-    // });
 
     await transporter.sendMail({
       from: process.env.SENDING_MAIL,
